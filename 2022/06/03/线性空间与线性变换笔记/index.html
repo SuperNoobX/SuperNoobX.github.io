@@ -1,41 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>线性空间与线性变换 | 骑猪看星星</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线性空间与线性变换笔记  回顾 线性空间的定义与性质 线性相关与线性无关 线性空间的基与维数 欧氏空间 线性变换    线性空间与线性变换笔记 回顾 逆矩阵 设A是n阶可逆矩阵，则 伴随矩阵的求法： 1.求所有元素的代数余子式 2.按行求，按列放构成伴随矩阵(就是转置) 克莱姆(Cramer)法则 设是n阶方阵，记 设A是n阶可逆阵，则有唯一解 .">
-<meta property="og:type" content="article">
-<meta property="og:title" content="线性空间与线性变换">
-<meta property="og:url" content="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="骑猪看星星">
-<meta property="og:description" content="线性空间与线性变换笔记  回顾 线性空间的定义与性质 线性相关与线性无关 线性空间的基与维数 欧氏空间 线性变换    线性空间与线性变换笔记 回顾 逆矩阵 设A是n阶可逆矩阵，则 伴随矩阵的求法： 1.求所有元素的代数余子式 2.按行求，按列放构成伴随矩阵(就是转置) 克莱姆(Cramer)法则 设是n阶方阵，记 设A是n阶可逆阵，则有唯一解 .">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/图片/线性子空间1.png">
-<meta property="og:image" content="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/图片/求过渡矩阵.png">
-<meta property="og:image" content="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/图片/对基的线性变换.png">
-<meta property="article:published_time" content="2022-06-03T09:44:17.511Z">
-<meta property="article:modified_time" content="2022-06-04T03:27:24.814Z">
-<meta property="article:author" content="烤鸭店在逃鸭脖">
-<meta property="article:tag" content="数学">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/图片/线性子空间1.png">
-  
-    <link rel="alternate" href="/atom.xml" title="骑猪看星星" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>线性空间与线性变换 | 骑猪看星星</title><script>var config = {"hostname":"https://SuperNoobX.github.io","root":"/","preload":false,"path":""}</script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+  menuSettings: {
+    zoom: "None"
+  },
+  showMathMenu: false,
+  jax: ["input/TeX","output/CommonHTML"],
+  extensions: ["tex2jax.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js"],
+    equationNumbers: {
+      autoNumber: "AMS"
+    }
+  },
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]]
+  }
+});</script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.4.0/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -147,65 +134,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">骑猪看星星</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://SuperNoobX.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-线性空间与线性变换笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2022-06-03T09:44:17.511Z" itemprop="datePublished">2022-06-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      线性空间与线性变换
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- TOC -->
+</style></head><body style="background-image:url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);"><div id="cursor-container"><div id="cursor-outer"></div><div id="cursor-effect"></div></div><main><header><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><ol class="navContent"><li class="navItem search-header"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></li><li class="navItem"><a href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav><div class="search-popup"><div id="search-result"></div></div></header><article><div id="post-bg"><div id="post-title"><h1>线性空间与线性变换</h1><div id="post-info"><span>First Post:<span class="control"><time datetime="2022-06-03T09:44:17.511Z" id="date"> 2022-06-03</time></span></span><br><span>Last Update:<span class="control"><time datetime="2022-06-04T03:27:24.814Z" id="updated"> 2022-06-04</time></span></span></div></div><hr><div id="post-content"><!-- TOC -->
 <ol type="1">
 <li><a href="#线性空间与线性变换笔记">线性空间与线性变换笔记</a>
 <ol type="1">
@@ -343,126 +272,4 @@ V中任意向量<span class="math inline"><mjx-container class="MathJax" jax="SV
 在实际应用中，我往往需要对一个图形进行线性变换，这时我们考虑这个图形是由无数个由原点出发的向量组成。<br>
 由于每一个向量都可以写成基的线性组合，所以我们只需要对基进行线性变换即可<br>
 <img src="图片/对基的线性变换.png" alt="avator"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://supernoobx.github.io/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/" data-id="cl3zbftez0001bkv8bfa1fu4i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/06/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/06/03/%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0/">线性空间与线性变换</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/03/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 烤鸭店在逃鸭脖<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div id="footer-link" style="left: 50%;order: 0;border-left: 1px solid #fe2;padding-right: unset;max-width: calc(50% - 5px);"><a href="/2022/06/03/hello-world/">Hello World Prev →</a></div></div></div></div><div id="bottom-btn"><a id="to-top" onClick="index.scrolltop();" title="to top" style="opacity: 0; display: none;">∧</a></div></article><div class="aside-box"><aside><div id="aside-top"><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Dr.老NOOB</a></h1><div id="description"><p></p></div><!--if page.published === undefined--><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">2</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">1</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">0</span></div></section></div><div id="aside-block"><div id="toc-div"><h1>INDEX</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">线性空间与线性变换笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-number">1.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8"><span class="toc-number">1.2.</span> <span class="toc-text">线性空间的定义与性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3"><span class="toc-number">1.3.</span> <span class="toc-text">线性相关与线性无关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9F%BA%E4%B8%8E%E7%BB%B4%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">线性空间的基与维数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A7%E6%B0%8F%E7%A9%BA%E9%97%B4"><span class="toc-number">1.5.</span> <span class="toc-text">欧氏空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2"><span class="toc-number">1.6.</span> <span class="toc-text">线性变换</span></a></li></ol></li></ol></div></div></div><footer><text>published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></text><text> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknight</a></text><wbr><text>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></text></footer></aside></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script>const reset=_=>{}</script><script src="//unpkg.com/@highlightjs/cdn-assets@11.4.0/highlight.min.js"></script><script src="/js/arknights.js"></script><script>document.addEventListener("load",reset())</script></body></html>
